@@ -35,9 +35,11 @@
                     userInput = Console.ReadLine();
                     break;
                 }
-                catch (Exception e) { 
-                Console.WriteLine($"Invalid input{e}"); 
-                Console.WriteLine("Please enter a valid input!"); }
+                catch (Exception e)
+                {
+                    Console.WriteLine($"Invalid input{e}");
+                    Console.WriteLine("Please enter a valid input!");
+                }
             }
 
             int number = Convert.ToInt32(userInput);
