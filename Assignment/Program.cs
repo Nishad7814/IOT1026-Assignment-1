@@ -26,8 +26,20 @@
         /// <returns>The user input as an integer</returns>
         public static int AskForNumber(string text)
         {
+            string? userInput;
             Console.Write(text);
-            string userInput = Console.ReadLine(); // Needs work -> try/catch + loop or Int.TryParse + loop
+            for (; ; )
+            {
+                try
+                {
+                    userInput = Console.ReadLine();
+                    break;
+                }
+                catch (Exception e) { 
+                Console.WriteLine($"Invalid input{e}"); 
+                Console.WriteLine("Please enter a valid input!"); }
+            }
+
             int number = Convert.ToInt32(userInput);
             return number;
         }
