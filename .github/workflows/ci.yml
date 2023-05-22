@@ -40,7 +40,7 @@ jobs:
       run: reportgenerator -reports:**/coverage.cobertura.xml -targetdir:coverage -reporttypes:HtmlInline_AzurePipelines
 
     - name: Publish code coverage
-       uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: code-coverage
         path: coverage
